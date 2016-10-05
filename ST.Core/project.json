@@ -1,0 +1,23 @@
+﻿{
+  "supports": {},
+  "dependencies": {
+    "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
+    "MvvmCross": "4.3.0",
+    "MvvmCross.Forms.Presenter": "4.1.4",
+    "NETStandard.Library": "1.6.0",
+    "Xam.Plugin.Connectivity": "2.2.12",
+    "Xam.Plugin.DeviceInfo": "2.0.2",
+    "Xam.Plugin.Geolocator": "3.0.4",
+    "Xamarin.FFImageLoading": "2.1.8",
+    "Xamarin.FFImageLoading.Forms": "2.1.8",
+    "Xamarin.FFImageLoading.Transformations": "2.1.8",
+    "Xamarin.Forms": "2.3.2.127"
+  },
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": [
+        "portable-net45+win8+wpa81+wp8"
+      ]
+    }
+  }
+}

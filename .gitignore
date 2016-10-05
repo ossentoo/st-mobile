@@ -3,3 +3,5 @@
 ################################################################################
 
 /ST.Core/obj/Debug
+/ST.iOS/bin/iPhoneSimulator/Debug
+/ST.iOS/obj
