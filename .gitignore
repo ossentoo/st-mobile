@@ -5,3 +5,8 @@
 /ST.Core/obj/Debug
 /ST.iOS/bin/iPhoneSimulator/Debug
 /ST.iOS/obj
+/source/mobile/packages
+/source/mobile/ST.Core/bin/Debug
+/source/mobile/ST.Core/obj/Debug
+/source/mobile/ST.iOS/bin/iPhoneSimulator/Debug
+/source/mobile/ST.iOS/obj
