@@ -1,14 +1,18 @@
-﻿using Foundation;
+﻿using System;
+using FFImageLoading;
+using FFImageLoading.Forms.Touch;
+using Foundation;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 using MvvmCross.Platform;
 using UIKit;
+using Xamarin.Forms;
 
 namespace SpaceLinx.Training.iOS
 {
-	[Register("AppDelegate")]
-	public  class AppDelegate : MvxApplicationDelegate
-	{
+    [Register("AppDelegate")]
+    public class AppDelegate : MvxApplicationDelegate
+    {
 
         public override UIWindow Window
         {
@@ -18,6 +22,19 @@ namespace SpaceLinx.Training.iOS
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
+            CachedImageRenderer.Init();
+            Forms.Init();
+
+            var config = new FFImageLoading.Config.Configuration()
+            {
+                VerboseLogging = false,
+                VerbosePerformanceLogging = false,
+                VerboseMemoryCacheLogging = false,
+                VerboseLoadingCancelledLogging = false,
+                Logger = new CustomLogger(),
+            };
+            ImageService.Instance.Initialize(config);
+
             // create a new window instance based on the screen size
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
@@ -62,6 +79,24 @@ namespace SpaceLinx.Training.iOS
         public override void WillTerminate(UIApplication application)
         {
             // Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
+        }
+
+        internal class CustomLogger : FFImageLoading.Helpers.IMiniLogger
+        {
+            public void Debug(string message)
+            {
+                Console.WriteLine(message);
+            }
+
+            public void Error(string errorMessage)
+            {
+                Console.WriteLine(errorMessage);
+            }
+
+            public void Error(string errorMessage, Exception ex)
+            {
+                Error(errorMessage + Environment.NewLine + ex);
+            }
         }
     }
 }
