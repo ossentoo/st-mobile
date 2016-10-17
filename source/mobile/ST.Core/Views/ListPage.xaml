@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:SpaceLinx.Training.Core.ViewModels.Controls;assembly=SpaceLinx.Training.Core"
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:transformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             x:Class="SpaceLinx.Training.Core.Views.ListPage">
+  <ListView x:Name="ListView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+            HasUnevenRows="False" RowHeight="210" ItemsSource="{Binding Items}">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <forms:CachedImage HorizontalOptions="Center" VerticalOptions="Center"
+			    WidthRequest="300" HeightRequest="300" DownsampleToViewSize="true"
+              Source = "{Binding ImageUrl}">
+          <forms:CachedImage.Transformations>
+            <transformations:GrayscaleTransformation />
+          </forms:CachedImage.Transformations>
+        </forms:CachedImage>
+      </DataTemplate>
+      </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>

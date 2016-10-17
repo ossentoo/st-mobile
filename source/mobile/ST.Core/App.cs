@@ -17,7 +17,7 @@ namespace SpaceLinx.Training.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<FirstViewModel>();
+            RegisterAppStart<ListViewModel>();
         }    
     }
 }

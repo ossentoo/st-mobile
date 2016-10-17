@@ -3,6 +3,28 @@
   "version": 2,
   "targets": {
     ".NETStandard,Version=v1.6": {
+      "DLToolkit.PageFactory.Forms/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "DLToolkit.PageFactory.Shared": "2.0.1",
+          "Xamarin.Forms": "1.4.4.6392"
+        },
+        "compile": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/DLToolkit.PageFactory.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/DLToolkit.PageFactory.Forms.dll": {}
+        }
+      },
+      "DLToolkit.PageFactory.Shared/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/DLToolkit.PageFactory.Shared.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/DLToolkit.PageFactory.Shared.dll": {}
+        }
+      },
       "Microsoft.NETCore.Jit/1.0.2": {
         "type": "package"
       },
@@ -1301,6 +1323,27 @@
     }
   },
   "libraries": {
+    "DLToolkit.PageFactory.Forms/2.0.1": {
+      "sha512": "Zxfj4cJFHr7UxrYCOj+uPDq7Rm+HJRPOdlNanTd3D07RfrRY285BNNjlWeCFRIM+BVsNjmukFQZVDgzhCZPWEw==",
+      "type": "package",
+      "path": "DLToolkit.PageFactory.Forms/2.0.1",
+      "files": [
+        "DLToolkit.PageFactory.Forms.2.0.1.nupkg.sha512",
+        "DLToolkit.PageFactory.Forms.nuspec",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/DLToolkit.PageFactory.Forms.dll"
+      ]
+    },
+    "DLToolkit.PageFactory.Shared/2.0.1": {
+      "sha512": "Y8ESwKdeD/cPNvsxvwGuBZY2mrPOhAr0Ci14I1w6lp8/zt5Gjzd4fPBCkaALTH1fp1Bk6SDR7ouOTT0/XJrc8A==",
+      "type": "package",
+      "path": "DLToolkit.PageFactory.Shared/2.0.1",
+      "files": [
+        "DLToolkit.PageFactory.Shared.2.0.1.nupkg.sha512",
+        "DLToolkit.PageFactory.Shared.nuspec",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/DLToolkit.PageFactory.Shared.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/DLToolkit.PageFactory.Shared.xml"
+      ]
+    },
     "Microsoft.NETCore.Jit/1.0.2": {
       "sha512": "Ok2vWofa6X8WD9vc4pfLHwvJz1/B6t3gOAoZcjrjrQf7lQOlNIuZIZtLn3wnWX28DuQGpPJkRlBxFj7Z5txNqw==",
       "type": "package",
@@ -5023,6 +5066,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "DLToolkit.PageFactory.Forms >= 2.0.1",
       "Microsoft.NETCore.Portable.Compatibility >= 1.0.1",
       "MvvmCross >= 4.3.0",
       "MvvmCross.Forms.Presenter >= 4.1.4",

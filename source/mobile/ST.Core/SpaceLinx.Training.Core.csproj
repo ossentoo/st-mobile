@@ -42,13 +42,22 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="LandingPage.cs" />
+    <Compile Include="Models\ListExampleItem.cs" />
+    <Compile Include="Models\ListHeavyItem.cs" />
+    <Compile Include="Models\MenuItem.cs" />
     <Compile Include="MvxPresenterHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Controls\ListViewCell.cs" />
+    <Compile Include="ViewModels\Controls\ViewCellNonSelectable.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
+    <Compile Include="ViewModels\ListViewModel.cs" />
     <Compile Include="Views\BasePage.cs" />
     <Compile Include="Views\FirstPage.xaml.cs">
       <DependentUpon>FirstPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListPage.xaml.cs">
+      <DependentUpon>ListPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -61,7 +70,12 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ListPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <PropertyGroup>

@@ -1,6 +1,7 @@
 ﻿{
   "supports": {},
   "dependencies": {
+    "DLToolkit.PageFactory.Forms": "2.0.1",
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
     "MvvmCross": "4.3.0",
     "MvvmCross.Forms.Presenter": "4.1.4",
